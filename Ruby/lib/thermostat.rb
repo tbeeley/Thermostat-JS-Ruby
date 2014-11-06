@@ -15,4 +15,10 @@ class Thermostat
 		psm_mode == true ? 25 : 32
 	end
 
+	def increase_temperature
+		unless temperature >= maximum_temperature
+			@temperature += 1
+		end
+	end
+
 end

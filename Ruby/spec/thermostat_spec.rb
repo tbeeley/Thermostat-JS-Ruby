@@ -28,27 +28,41 @@ describe Thermostat do
         end
     end
 
+    context 'increasing temperature with PSM off' do
+
+        before(:each) do
+            thermostat.turn_psm_off
+        end
+
+        it 'increases if < 32 degrees' do
+            thermostat.temperature = 27
+
+            thermostat.increase_temperature
+            expect(thermostat.temperature).to eq 28
+        end
+
+        it 'does not increase if >= 32 degrees' do
+            thermostat.temperature = 32
+
+            thermostat.increase_temperature
+            expect(thermostat.temperature).to eq 32
+        end
+
+    end
+
+    context 'increasing temperature with PSM on' do
+
+    end
+
+    context 'decreasing temperature with PSM off' do
+
+    end
+
+    context 'decreasing temperature with PSM on' do
+
+    end
+
 end
-
-
-
-
-
-
-# describe('increasing the temperature', function() {
-
-#   describe('PSM off', function() {
-
-#     beforeEach(function() {
-#       thermostat.powerSavingMode = false;
-#     })
-
-#     it("increases if < 32 degrees", function() {
-#       thermostat.temperature = 25
-
-#       thermostat.increaseTemperature()
-#       expect(thermostat.temperature).toEqual(26)
-#     });
 
 #     it("does not increase if temperature is >= 32 degrees", function() {
 #       thermostat.temperature = 32;

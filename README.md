@@ -1,4 +1,4 @@
 Thermostat---JS
 ===============
 
-Some Javascript Practice
+Thermostat technical in Javascript. 

@@ -1,7 +1,7 @@
 Thermostat: JS and Ruby
 ===============
 
-![Image](/assets/nest1.png)
+![Image](/assets/nest2.png)
 
 A smart thermostat program, built in Javascript and Ruby
 

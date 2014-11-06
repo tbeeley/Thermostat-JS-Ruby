@@ -1,0 +1,1 @@
+thermostat_spec.rb

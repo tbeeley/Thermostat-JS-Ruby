@@ -2,13 +2,13 @@ class Thermostat
 
 	def initialize
 		@temperature = 20
-		@psm_mode = true
+		@psm_mode = false
 	end
 
 	attr_accessor :temperature, :psm_mode
 
-	def turn_psm_off
-		@psm_mode = false
+	def turn_psm_on
+		@psm_mode = true
 	end
 
 	def maximum_temperature
@@ -19,6 +19,16 @@ class Thermostat
 		unless temperature >= maximum_temperature
 			@temperature += 1
 		end
+	end
+
+	def decrease_temperature
+		unless temperature <= 10
+			@temperature -= 1
+		end
+	end
+
+	def reset_temperature
+		@temperature = 20
 	end
 
 end

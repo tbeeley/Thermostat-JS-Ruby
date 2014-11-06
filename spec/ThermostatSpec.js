@@ -99,5 +99,16 @@ describe("Thermostat", function() {
     });
 
   });
+
+  describe('reseting the temperature', function(){
+
+    it('resets the temperature to 20', function(){
+      thermostat.temperature = 22
+
+      thermostat.resetTemperature()
+      expect(thermostat.temperature).toEqual(20)
+    });
+
+  });
   
 });

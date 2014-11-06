@@ -1,9 +1,9 @@
 Thermostat: JS and Ruby
 ===============
+A smart thermostat program, built in Javascript and Ruby
 
 ![Image](/assets/nest_pic.png)
 
-A smart thermostat program, built in Javascript and Ruby
 
 Specification:
 

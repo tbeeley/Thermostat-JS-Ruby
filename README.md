@@ -25,7 +25,7 @@ Technologies Used
 
 How to set it up
 
-git clone git@github.com:tbeeley
+git clone https://github.com/tbeeley/Thermostat-JS-Ruby.git
 cd Thermostat
 
 How to test it:

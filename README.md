@@ -29,7 +29,6 @@ How to set it up
 - cd Thermostat
 
 How to test it:
-
 Javascript:
 - cd Javascript
 - Open /lib/jasmine/SpecRunner.html in the browser.

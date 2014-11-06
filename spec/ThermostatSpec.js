@@ -110,5 +110,24 @@ describe("Thermostat", function() {
     });
 
   });
+
+  describe('energy usage', function(){
+
+    it('is efficient if temperature is < 18', function(){
+      thermostat.temperature = 17;
+      expect(thermostat.energyUsage()).toEqual('efficient')
+    });
+
+    it('is average if temperature is < 25', function(){
+      thermostat.temperature = 22;
+      expect(thermostat.energyUsage()).toEqual('average')
+    });
+
+    it('is inefficient if temperature is >= 25', function(){
+      thermostat.temperature = 28;
+      expect(thermostat.energyUsage()).toEqual('inefficient')
+    });
+
+  });
   
 });

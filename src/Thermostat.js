@@ -20,3 +20,13 @@ Thermostat.prototype.maximumTemperature = function() {
 Thermostat.prototype.resetTemperature = function() {
 	this.temperature = 20;
 };
+
+Thermostat.prototype.energyUsage = function() {
+	if(this.temperature < 18) { 
+		return 'efficient'
+	} else if (this.temperature < 25) { 
+		return 'average'
+	} else {
+		return 'inefficient'
+	}
+};

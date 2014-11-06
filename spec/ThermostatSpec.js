@@ -9,6 +9,10 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(20)
   });
 
+  it('should initialize with PSM on', function() {
+    expect(thermostat.powerSavingMode).toBe(true) 
+  });
+
   describe('increasing the temperature', function() {
   
     it("increase if < 25 degrees", function() {

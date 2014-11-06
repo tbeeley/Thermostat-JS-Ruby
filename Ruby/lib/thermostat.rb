@@ -31,4 +31,14 @@ class Thermostat
 		@temperature = 20
 	end
 
+	def energy_score
+		if temperature < 18
+			return 'efficient'
+		elsif temperature < 25
+			return 'average'
+		else
+			return 'inefficient'
+		end
+	end
+
 end

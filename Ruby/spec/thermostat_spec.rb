@@ -89,4 +89,23 @@ describe Thermostat do
 
     end
 
+    context 'effciency' do
+
+        it 'should return efficient if temperature is < 18' do
+            thermostat.temperature = 17
+            expect(thermostat.energy_score).to eq 'efficient'
+        end
+
+        it 'should return average if temperature is < 25' do
+            thermostat.temperature = 24
+            expect(thermostat.energy_score).to eq 'average'
+        end
+
+        it 'should return inefficient if temperature is >= 25' do
+            thermostat.temperature = 29
+            expect(thermostat.energy_score).to eq 'inefficient'
+        end
+
+    end
+
 end

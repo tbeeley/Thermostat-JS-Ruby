@@ -14,29 +14,51 @@ describe("Thermostat", function() {
   });
 
   describe('increasing the temperature', function() {
-  
-    it("increase if < 25 degrees", function() {
-      thermostat.increaseTemperature()
-      expect(thermostat.temperature).toEqual(21)
-    });
 
-    it("does not increase if temperature is >= 25 degrees", function() {
-      thermostat.temperature = 25;
+    describe('PSM on', function() {
 
-      thermostat.increaseTemperature()
-      expect(thermostat.temperature).toEqual(25)
-    });
-
-    it("decrease if > 10 degrees", function() {
-      thermostat.decreaseTemperature()
-      expect(thermostat.temperature).toEqual(19)
-    });
-
-    it("does not decrease if <= 10 degrees", function() {
-      thermostat.temperature = 10
-      thermostat.decreaseTemperature()
-      expect(thermostat.temperature).toEqual(10)
     });
   
+    describe('PSM off', function() {
+
+      it("increases if < 25 degrees", function() {
+        thermostat.increaseTemperature()
+        expect(thermostat.temperature).toEqual(21)
+      });
+
+      it("does not increase if temperature is >= 25 degrees", function() {
+        thermostat.temperature = 25;
+
+        thermostat.increaseTemperature()
+        expect(thermostat.temperature).toEqual(25)
+      });
+
+    });
+
   });
+
+  describe('decreasing the temperature', function() {  
+
+    describe('PSM on', function() {
+
+    });
+
+    describe('PSM off', function() {
+
+      it("decreases if > 10 degrees", function() {
+        thermostat.decreaseTemperature()
+        expect(thermostat.temperature).toEqual(19)
+      });
+
+      it("does not decrease if <= 10 degrees", function() {
+        thermostat.temperature = 10;
+
+        thermostat.decreaseTemperature()
+        expect(thermostat.temperature).toEqual(10)
+      });
+
+    });
+
+  });
+  
 });

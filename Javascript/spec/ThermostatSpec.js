@@ -74,16 +74,6 @@ describe("Thermostat", function() {
 
   describe('decreasing the temperature', function() {  
 
-    describe('PSM off', function() {
-
-      beforeEach(function() {
-        thermostat.powerSavingMode = false;
-      }) 
-
-    });
-
-    describe('PSM on', function() {
-
       it("decreases if > 10 degrees", function() {
         thermostat.decreaseTemperature()
         expect(thermostat.temperature).toEqual(19)
@@ -95,8 +85,6 @@ describe("Thermostat", function() {
         thermostat.decreaseTemperature()
         expect(thermostat.temperature).toEqual(10)
       });
-
-    });
 
   });
 
